@@ -1,6 +1,7 @@
 [submodule "core"]
 	path = core
 	url = https://github.com/fukiame/opsu_on_droid
+	branch = main
 [submodule "jlayer/src"]
 	path = jlayer/src
 	url = https://github.com/fluddokt/JLayerOpsu.git
