@@ -16,6 +16,7 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Set up JDK 8
+      id: setup-java
       uses: actions/setup-java@v3
       with:
         java-version: '8'
@@ -23,7 +24,7 @@ jobs:
 
     - name: Set up Android SDK
       env:
-        JAVA_HOME: /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64
+        JAVA_HOME: ${{ steps.setup-java.outputs.java-home }}
       run: |
         sudo apt-get update
         sudo apt-get install -y wget unzip
